@@ -1,0 +1,6 @@
+D:\rep2>git log
+commit 57eb914d03f3ba762860ecf860ccd90729226846
+Author: Arseny Gulenkov <knoxaim@gmail.com>
+Date:   Thu Feb 9 20:04:44 2017 +0300
+
+    add .gitignore
