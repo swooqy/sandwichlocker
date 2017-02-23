@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+    margin 0;
+    padding 0;
+}
+
+
+html {
+    background: #e6e9e9;
+    background-image: linear-gradient(45deg, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
+    background-repeat: no-repeat;
+   /* background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    -webkit-font-smoothing: antialiased;*/
+}
+.header {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 2.8vw;
+    font-weight: 100;
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    background-color: #E5B7DF;
+    background-image: linear-gradient(45deg, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
+    display: block;
+}
+
+#logo{
+    max-width: 2.5vw;
+    display: inline;
+}
+
+.navbar a{
+    color:aliceblue;
+}
+.navbar a:hover{
+    color: white;
+    font-weight: 100;
+    text-shadow: 0 0 10px #FFF;
+}
+
+.navbar {
+   /* margin: auto;*/
+    color: aliceblue;
+    max-width: 800px;
+    width: 30%;
+    display: inline;
+    align-content: center;
+    margin:auto;
+    
+  /* position: relative;*/
+}
+
+ul{
+    list-style: circle
+    display: inline;
+    margin-left: 0px;
+}
+
+li {
+    list-style-type:none;
+    margin: 20px auto;
+    display: inline-block;
+    padding 0px 0px;
+}
+
+
+.login-info {
+    position: relative;
+    text-align: center;
+    width:20%;
+    font-size: 50%;
+    margin-left: 20px;
+    display: inline-block;
+    color:aliceblue;
+    max-width: 20%;
+    margin: auto;
+}
+.login-info:hover{
+    color: white;
+    font-weight: 100;
+    text-shadow: 0 0 10px #FFF
+}
+
+.username {
+    margin: 0px;
+    max-height: 20%;
+    display: inline-block;
+    font-weight:800;
+}
+
+login-info, navbar{
+    display: inline;
+    margin: 0;
+    padding 0;
+}
+
+.header-content {
+    width: 70vw;
+    max-width: 800px;
+    padding: 0;
+    margin: auto;
+}
+
+.mainsection {
+    background-color: #FFF;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    max-width: 680px;
+    margin: -27px auto;
+    padding: 0px;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 250%;
+    font-weight: 100;
+}
+
+
+h1 {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: 100;
+    text-align: center;
+    padding: 2%;
+}
+h2 {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 80%;
+    font-weight: 300;
+    text-align: center;
+    padding: 2%;
+    max-width: 88%;
+    margin: auto;
+}
+h2 a{
+    color: black;
+    text-decoration:none;
+}
+h2 a:hover{
+    color:#DEDDE5;
+    transition: .1s ease;
+}
+
+
+.news img{
+    max-width:100%;
+    height: auto;
+}
+.imagecontainer {
+    transition: 0.5s ease;
+    max-width:88%;
+    height: auto;
+    margin: 0 auto;
+}
+.imagecontainer:hover{
+    opacity: 0.6;
+}
+
+
+
+.submitter{
+    display: inline;
+    font-family: "Raleway", serif;
+    font-size: 30%;
+    font-weight: 200;
+    max-width: 200px;
+    float: left;
+}
+.username2{
+    display:inline;
+    font-weight: 500;
+}
+
+.news-underbox {
+    max-width: 88%;
+    margin: auto;
+}
+
+.news-preview {
+    max-width:100%;
+    margin: auto;
+    font-family: "Raleway", serif;
+    font-size: 40%;
+    font-weight: 300;
+    text-transform: none;
+}
+.more{
+    display: inline;
+    font-family: "Raleway", serif;
+    font-size: 30%;
+    font-weight: 500;
+    max-width: 150px;
+    float: right;
+    color:black;
+}
+
+.more:hover{
+    color:#DEDDE5;
+}
+
+.news-bottomline {
+    min-height: 30px;
+    min-height: 30px;
+}
+
+.footer{
+    padding-top:50px;
+    margin: auto;
+    max-width: 680px;
+    text-align: center;
+    
+}
+
+.footer a {
+    font-family: Raleway, serif;
+    color: dimgray;
+    text-decoration:none;
+   
+    font-size:60%;
+    
+}
+.footer a:hover{
+    color:#DEDDE5;
+}
+.logodiv {
+    max-width: 35px;
+    max-height:40px;
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 10px;
+    padding-bottom: -50px;
+}
+
+
+body {
+    /*background-image: linear-gradient(45deg, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);*/
+    margin: 0;
+    padding 0;
+}
+.errorsection{
+    font-family:Raleway, sans-serif;
+    text-transform: uppercase;
+    color:aliceblue;
+    font-size: 400%;
+    font-weight: 100;
+    max-width: 80%;
+    margin: 10% auto;
+}
