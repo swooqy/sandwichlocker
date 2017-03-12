@@ -10,6 +10,10 @@ html {
    /* background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
     -webkit-font-smoothing: antialiased;*/
 }
+
+
+/*HEADER STYLING*/
+
 .header {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     font-family: Raleway, sans-serif;
@@ -30,17 +34,17 @@ html {
 }
 
 .navbar a{
-    color:aliceblue;
+    color:#f0f8ff;
 }
 .navbar a:hover{
-    color: white;
-    font-weight: 100;
-    text-shadow: 0 0 10px #FFF;
+    color: #FFF;
+
+    text-shadow: 0 0 15px #FFF;
 }
 
 .navbar {
    /* margin: auto;*/
-    color: aliceblue;
+    color: #f0f8ff;
     max-width: 800px;
     width: 30%;
     display: inline;
@@ -69,14 +73,13 @@ li {
     text-align: center;
     width:20%;
     font-size: 50%;
-    margin-left: 20px;
     display: inline-block;
-    color:aliceblue;
+    color:#f0f8ff;
     max-width: 20%;
     margin: auto;
 }
 .login-info:hover{
-    color: white;
+    color: #FFF;
     font-weight: 100;
     text-shadow: 0 0 10px #FFF
 }
@@ -101,17 +104,67 @@ login-info, navbar{
     margin: auto;
 }
 
-.mainsection {
-    background-color: #FFF;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
-    max-width: 680px;
-    margin: -27px auto;
-    padding: 0px;
-    font-family: Raleway, sans-serif;
+
+
+/*SEARCH BAR STYLING*/
+
+.search-authors-select{
+    
+    font-family: Raleway, serif;
+    
+    -webkit-appearance: button;
+    
+    background-color: #e6e9e9; 
+    background-image:  -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
+    background-position: center right;
+    background-repeat: no-repeat;
+    border: 1px solid #FF;
+    border-radius: 2px;
+    color: #555;
+    font-size: inherit;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+.search-header {
+    font-family: Raleway, serif;
     text-transform: uppercase;
     font-size: 250%;
-    font-weight: 100;
+    font-weight:100;
+    padding: 0;
+    max-width:160px;
+    margin:auto;
+    
 }
+
+#search-by-author {
+    font-family: Raleway, serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 5%;
+    max-width:300px;
+}
+
+#search-by-author-title {
+    margin-bottom: 2%;
+    display:inline;
+}
+
+.search-placeholder {
+    display:inline-block;
+    font-family: Raleway, serif;
+    font-weight: 100;
+    font-size: 120%;
+    float:right;
+    margin-top:2%;
+}
+
+
+/*NEWS STYLING*/
 
 
 h1 {
@@ -133,7 +186,7 @@ h2 {
     margin: auto;
 }
 h2 a{
-    color: black;
+    color: #000;
     text-decoration:none;
 }
 h2 a:hover{
@@ -145,15 +198,20 @@ h2 a:hover{
 .news img{
     max-width:100%;
     height: auto;
+    transition: 0.5s ease;
+
 }
 .imagecontainer {
     transition: 0.5s ease;
     max-width:88%;
     height: auto;
+    max-height: 20%;
     margin: 0 auto;
 }
-.imagecontainer:hover{
-    opacity: 0.8;
+.imagecontainer img:hover{
+    /*opacity: 0.8;*/
+    box-shadow: 0 0.8em 1.5em #AEAAAA;
+    transition: 0.5s ease;
 }
 
 
@@ -163,7 +221,6 @@ h2 a:hover{
     font-family: "Raleway", serif;
     font-size: 30%;
     font-weight: 200;
-    max-width: 200px;
     float: left;
 }
 .username2{
@@ -173,7 +230,8 @@ h2 a:hover{
 
 .news-underbox {
     max-width: 88%;
-    margin: auto;
+    margin: 0 auto;
+    margin-bottom: 0em;
 }
 
 .news-preview {
@@ -191,7 +249,7 @@ h2 a:hover{
     font-weight: 500;
     max-width: 150px;
     float: right;
-    color:black;
+    color:#000;
 }
 
 .more:hover{
@@ -199,32 +257,10 @@ h2 a:hover{
 }
 
 .news-bottomline {
-    min-height: 30px;
+    min-height: 20px;
 }
 
-.footer{
-    padding-top:50px;
-    margin: auto;
-    max-width: 680px;
-    text-align: center;
-    font-family: Raleway, serif;
-    color: dimgray;
-    text-decoration:none;
-    font-size: 60%;
-    margin-bottom:1%;
-}
 
-.footer a {
-    font-family: Raleway, serif;
-    color: dimgray;
-    text-decoration:none;
-   
-    /*font-size:60%;*/
-    
-}
-.footer a:hover{
-    color:#DEDDE5;
-}
 
 body {
     margin: 0;
@@ -246,10 +282,11 @@ body {
     padding-bottom: -50px;
 }
 
-.news-upperbox {
-    max-width: 88%;
+.news-editbox {
     margin: auto;
     min-height: 20px;
+    margin-bottom: 0;
+    display: block;
 }
 
 .news-edit a{
@@ -259,7 +296,7 @@ body {
     font-weight: 500;
     max-width: 200px;
     float: left;
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 
@@ -274,10 +311,88 @@ body {
     font-weight: 500;
     max-width: 200px;
     float: right;
-    color: black;
+    color: #000;
     text-decoration: none;
 }
 
 .news-delete a:hover{
     color: #DEDDE5;
 }
+
+.news {
+    margin-bottom: 0.3em;
+}
+
+.content-container {
+   background-color: #FFF;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    max-width: 680px;
+    margin: -27px auto;
+    padding: 0px;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-size: 250%;
+    font-weight: 100;
+}
+
+.search-pannel {
+    transition: .1s ease;
+    max-width: 680px;
+    margin: auto;
+    display: none;
+}
+
+.news-dateposted {
+    min-height: 20px;
+}
+
+.news-dateposted-static {
+    display: inline;
+    font-family: "Raleway", serif;
+    font-weight: 200;
+    float: left;
+}
+
+.news-dateposted-date {
+    display:inline;
+    font-weight: 500;
+    font-family: "Raleway", serif;
+}
+
+.news-dateposted-floater {
+    display: inline;
+    font-family: "Raleway", serif;
+    font-size: 30%;
+    font-weight: 200;
+    float: left;
+}
+
+
+
+/*FOOTER STYLING*/
+
+.footer{
+    padding-top:50px;
+    margin: auto;
+    max-width: 680px;
+    text-align: center;
+    font-family: Raleway, serif;
+    color: #696969;
+    text-decoration:none;
+    font-size: 60%;
+    margin-bottom:1%;
+}
+
+.footer a {
+    font-family: Raleway, serif;
+    color: #696969;
+    text-decoration:none;
+   
+    /*font-size:60%;*/
+    
+}
+.footer a:hover{
+    color:#DEDDE5;
+}
+
+

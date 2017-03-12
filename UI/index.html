@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
+     
     <head>
+       
+        <meta charset="UTF-8">
         <title>The Radar | Main</title>
         <link rel="icon" href="img/icon/theradar.png">
         <link href="styles.css" type "text/css" rel="stylesheet">
@@ -21,8 +24,8 @@
                     
                     <ul class="navbar">
                         <a href="index.html"><li>Main</li></a>
-                        <a href="error.html"><li>Add</li></a>
-                        <a href="error.html"><li>Search</li></a>
+                        <a href="error.html" id="add-news"><li>Add</li></a>
+                        <a href="#"><li onclick="showSearchPannel()">Search</li></a>
                         <a href="error.html"><li>about</li></a>
                     </ul>
                     <a href="error.html"><div class="login-info">
@@ -37,161 +40,93 @@
                 </div>
         </div>
         
-        <div class="mainsection">
+        
+        
+        
+        <!--HEADER STOPS HERE-->
+        
+        <div class="search-pannel">
+            <div class="search-header">
+                 Search
+            </div>
+        
+            <div id="search-by-author">
+                <div id="search-by-author-title">
+                    Search by author:
+                </div>
+                <br>
+                <select class="search-authors-select">
+                    <option value='boi'>boi</option>
+                </select>
+            </div>
+            
+            <div class="search-placeholder">
+                Sorry, search is not implemented yet
+            </div>
+            
+                
+                
+        </div>
+        
+        
+        <div class="content-container">
             <h1>News</h1>
 
-            <div class="news">
-                <h2><a href="news/1.html">Meme Interview</a></h2>
+            <div class="mainsection">
                 
-                <a href="news/1.html"><div class="imagecontainer">
+            </div>
+            
+            
+            <!--TEMP-->
+            <template id="template-article">
+                <div class="news" data-id="id">
+                <h2 class="article-title"><a href="news/1.html">Title</a></h2>
+                
+                <a class="imagecontainer-link" href="news/1.html"><div class="imagecontainer">
                     <img src="img/img/1.jpg">
                 </div></a>
                 
-                <div class="news-upperbox">
-                    <div class="news-edit">
-                        <a href="#">Edit</a>
-                    </div>
-                    <div class="news-delete">
-                        <a href="#">Delete</a>
-                    </div>
-                </div>
+                
                 
                 <div class="news-underbox">
                     <div class="news-preview">
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam interdum libero, vitae sollicitudin dui tincidunt eu. Vestibulum tincidunt nunc erat, eu facilisis eros semper quis. Nullam sed tortor velit. Vivamus lobortis, nisi vitae scelerisque commodo, diam ipsum porttitor arcu, et aliquet massa lacus quis quam.
+                        Article content preview
                         </p>
                     </div>
                     
                     <div class="news-bottomline">
                         <div class="submitter">Submited by: <div class="username2">Swooqy</div></div>
-                        <a href="news/1.html"><div class="more"> Read More</div></a>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            
-            <div class="news">
-                <h2><a href="news/2.html">Constructing a Breakbeat Instrument</a></h2>
-                <a href="news/2.html"><div class="imagecontainer">
-                    <img src="img/img/2.jpg">
-                </div></a>
-                
-                <div class="news-upperbox">
-                    <div class="news-edit">
-                        <a href="#">Edit</a>
-                    </div>
-                    <div class="news-delete">
-                        <a href="#">Delete</a>
-                    </div>
-                </div>
-                
-                <div class="news-underbox">
-                    <div class="news-preview">
-                        <p>
-                        breakbeat : a repeated sample of a drumbeat, usually forming a fast syncopated rhythm, used as a basis for dance music.
-                                <br>
-                            In the earlier days of funk and r&b music, breakbeats were sections where every instrument stopped playing except the drums for at least one bar. Breakbeats have been known and used for a long time, and are widely known for being sampled by many early producers of hip hop, where the “break” in a song, usually only a few seconds long, is looped to create basis for an entire new song.
-                        </p>
+                        <a class="more-link" href="news/1.html"><div class="more"> Read More</div></a>
                     </div>
                     
-                    <div class="news-bottomline">
-                        <div class="submitter">Taken from: <div class="username2">Splice.com/blog</div></div>
-                        <a href="news/2.html"><div class="more"> Read More</div></a>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            
-            <div class="news">
-                <h2><a href="news/3.html">How to make a custom drum kit with Logic Pro X Drum Machine</a></h2>
-                <a href="news/3.html"><div class="imagecontainer">
-                    <img src="img/img/3.jpg">
-                </div></a>
-                
-                <div class="news-upperbox">
-                    <div class="news-edit">
-                        <a href="#">Edit</a>
-                    </div>
-                    <div class="news-delete">
-                        <a href="#">Delete</a>
-                    </div>
-                </div>
-                
-                <div class="news-underbox">
-                    <div class="news-preview">
-                        <p>
-                        Drum Machine Designer by Apple’s Logic Pro X comes with a complete set of presets that sound great. But let’s face it, there’s always room for more drum kits. In this tutorial, we’ll show you how to build a custom drum kit in Drum Machine Designer using whatever samples you like. We’ll also look at how save it into a preset and recall it easily for future use.
-                        </p>
+                    <div class="news-dateposted">
+                        <div class="news-dateposted-floater">
+                            <div class="news-dateposted-static">
+                                Posted on: 
+                                <div class="news-dateposted-date">
+                                xxx
+                            </div>
+                            </div>
+                            
+                        </div>
+                        
                     </div>
                     
-                    <div class="news-bottomline">
-                        <div class="submitter">Taken from: <div class="username2">Splice.com/blog</div></div>
-                        <a href="news/3.html"><div class="more"> Read More</div></a>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            
-            <div class="news">
-                <h2><a href="news/4.html">Producing Future Beats: Mastering</a></h2>
-                <a href="news/4.html"><div class="imagecontainer">
-                    <img src="img/img/4.jpg">
-                </div></a>
-                
-                <div class="news-upperbox">
-                    <div class="news-edit">
-                        <a href="#">Edit</a>
-                    </div>
-                    <div class="news-delete">
-                        <a href="#">Delete</a>
-                    </div>
-                </div>
-                
-                <div class="news-underbox">
-                    <div class="news-preview">
-                        <p>
-                        We are excited to be able to have Ableton Certified Trainer, Alec Ness (producing as “su na“) to walk us through his production methods and philosophies on how to produce a Future Beats track. Su Na recently released Surface EP with coverage from The Fader and Thissongissick and much more. You can find out more about Su Na and listen to his music on his soundcloud, and facebook page.
-                        </p>
+                    <div class="news-editbox">
+                        <div class="news-edit">
+                            <a href="#">Edit</a>
+                        </div>
+                        <div class="news-delete">
+                            <a href="#">Delete</a>
+                        </div>
                     </div>
                     
-                    <div class="news-bottomline">
-                        <div class="submitter">Taken from: <div class="username2">Splice.com/blog</div></div>
-                        <a href="news/4.html"><div class="more"> Read More</div></a>
-                    </div>
-                    <br>
-                </div>
-            </div>
-            
-            <div class="news">
-                <h2><a href="news/5.html">Su Na Releases “Tell Me” Project from Surface EP on Splice!</a></h2>
-                <a href="news/5.html"><div class="imagecontainer">
-                    <img src="img/img/5.jpg">
-                </div></a>
-                
-                <div class="news-upperbox">
-                    <div class="news-edit">
-                        <a href="#">Edit</a>
-                    </div>
-                    <div class="news-delete">
-                        <a href="#">Delete</a>
-                    </div>
                 </div>
                 
-                <div class="news-underbox">
-                    <div class="news-preview">
-                        <p>
-                        Things move with gentle steadiness on Surface, the new EP from Minneapolis producer su na, the alias of Alec Ness. It’s a patient, futuristic R&B record that’s so immersive, it borders on synesthetic. Like a camera’s image coming into focus, blurry chordal backgrounds change into sharp lines just as the moment’s right, and Surface does prove to be a snapshot of very, very deep things. On Surface, su na delivers six new beautifully dense songs that blend hip-hop with glassy soul. Opener “Tell Me” unfurls like dawn over a sleepy city, while closing track “Essex” sways like it’s had one-too-many drinks.
-                        </p>
-                    </div>
-                    
-                    <div class="news-bottomline">
-                        <div class="submitter">Taken from: <div class="username2">Splice.com/blog</div></div>
-                        <a href="news/5.html"><div class="more"> Read More</div></a>
-                    </div>
-                    <br>
-                </div>
             </div>
+            </template>
+           
         </div>
         
         <div class="footer">The Radar by 
@@ -200,7 +135,8 @@
                 </a>© 2k17. 
         Note that website may look awfull if google fonts are not avaible
         </div>
-                
+        
+        <script src="script.js"></script>
             
     </body>
 </html>
