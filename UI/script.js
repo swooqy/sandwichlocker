@@ -342,7 +342,7 @@ var articleRenderer = (function () {
         
         
         
-        document.querySelector(".search-authors-select").innerHTML=listOfAuthors();
+        document.querySelector(".search-authors-select").innerHTML=articleRendererService.listOfAuthors;
     }
 
     function insertArticlesInDOM(articles) {
@@ -393,26 +393,10 @@ var articleRenderer = (function () {
     };
 }());
 
-document.addEventListener('DOMContentLoaded', startApp);
 
 
 var articleRendererService=(function(){
-    function startApp() {
-    articleRenderer.init();
-   renderArticles(0,20);
     
-    if(username){
-        document.querySelector('.username').textContent=username;
-    }else{
-        document.querySelector('.login-info').innerHTML='Please<br><div class="username"> Log In</div>';
-        var nodes=document.querySelectorAll('.news-editbox');
-        for (var i = 0; i < nodes.length; i++) {
-            nodes[i].style.display = 'none';
-        }
-        document.querySelector("#add-news").style.display ='none';
-    }
-    
-}
 
 function renderArticles(skip, top) {
     articleRenderer.removeArticlesFromDom();
@@ -456,7 +440,22 @@ function makeAuthorListString(input){
     var str='<option value="'+input+'">'+input+'</option>';
     return str;
 }
-   
+function startApp() {
+    articleRenderer.init();
+    renderArticles(0,20);
+    
+    if(username){
+        document.querySelector('.username').textContent=username;
+    }else{
+        document.querySelector('.login-info').innerHTML='Please<br><div class="username"> Log In</div>';
+        var nodes=document.querySelectorAll('.news-editbox');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].style.display = 'none';
+        }
+        document.querySelector("#add-news").style.display ='none';
+    }
+    
+}
 return{
     startApp: startApp,
     addArticle: addArticle,
@@ -472,7 +471,7 @@ return{
 
 
 
-
+document.addEventListener('DOMContentLoaded', articleRendererService.startApp);
 
 
 
