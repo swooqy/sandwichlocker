@@ -396,7 +396,8 @@ var articleRenderer = (function () {
 document.addEventListener('DOMContentLoaded', startApp);
 
 
-function startApp() {
+var articleRendererService=(function(){
+    function startApp() {
     articleRenderer.init();
    renderArticles(0,20);
     
@@ -414,13 +415,10 @@ function startApp() {
 }
 
 function renderArticles(skip, top) {
-    // 1. Удалим статьи из HTML
     articleRenderer.removeArticlesFromDom();
 
-    // 2. Достанем статьи из модели
     var articles = articleService.getArticles(skip, top);
-
-    // 3. Отобразим статьи
+    
     articleRenderer.insertArticlesInDOM(articles);
 }
 
@@ -445,7 +443,6 @@ function showSearchPannel(){
         searchshown=true;
     }
 }
-
 function listOfAuthors(){
     var list='';
     var auths=articleService.getAuthorsList().slice(0);
@@ -455,11 +452,22 @@ function listOfAuthors(){
     }
     return list;
 }
-
 function makeAuthorListString(input){
     var str='<option value="'+input+'">'+input+'</option>';
     return str;
 }
+   
+return{
+    startApp: startApp,
+    addArticle: addArticle,
+    editArticle: editArticle,
+    deleteArticle: deleteArticle,
+    showSearchPannel: showSearchPannel,
+    renderArticles: renderArticles
+};
+
+}());
+
 
 
 
