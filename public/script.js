@@ -1113,6 +1113,7 @@ var filterService=(function(){
         }
     }
     function applyFilter(){
+        currentapage=0;
         var filter=createFilter();
         if(filter===articleRendererService.getFilter()){
             return;
@@ -1123,7 +1124,6 @@ var filterService=(function(){
         articleRendererService.setFilter(filter);
         articleRenderer.removeArticlesFromDom();
         articleRendererService.startApp();
-        currentapage=0;
     }
     function createFilter(){
         var author='';
