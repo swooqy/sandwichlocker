@@ -383,6 +383,7 @@ var articleService= (function(){
         getArticlesSize: getArticlesSize
     };
 }());
+
 var articleRendererService=(function(){
     var searchshown=false;
     var currentfilter;
@@ -519,7 +520,24 @@ var articleRenderer = (function () {
         
         
         var loa=articleRendererService.listOfAuthors(1);
-        document.querySelector(".search-authors-select").innerHTML=loa;
+        var select=document.querySelector(".search-authors-select")
+        select.innerHTML=loa;
+        
+        if(!articleRendererService.getFilter()){
+            return;
+        }
+        
+        var nmfilter=articleRendererService.getFilter().author;
+        
+        if(nmfilter){
+            var opts = select.options;
+            for (var opt, j = 0; opt = opts[j]; j++) {
+                if (opt.value == nmfilter) {
+                select.selectedIndex = j;
+                break;
+                }
+            }
+        }
     }
 
     function insertArticlesInDOM(articles) {
@@ -1121,6 +1139,7 @@ var filterService=(function(){
         if(!filter){
             return;
         }
+        clearFilter();
         articleRendererService.setFilter(filter);
         articleRenderer.removeArticlesFromDom();
         articleRendererService.startApp();
