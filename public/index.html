@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html id="fullhtml">
+     
+    <head>
+       
+        <meta charset="UTF-8">
+        <title>The Radar | Main</title>
+        <link rel="icon" href="img/icon/theradar.png">
+        <link href="styles.css" type "text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        
+        
+        
+        
+        <div class="header"> <!--HEADER W/ LINKS-->
+                <div class="header-content"  >
+                    <div class="logodiv">
+                        <img src="img/icon/theradar.png" id="logo">
+                    </div>
+                    
+                    <ul class="navbar">
+                        <a id="button-toindex"><li >Main</li></a>
+                        <a id="add-news"><li>Add</li><a></a>
+                        <a id="searchtoggle"><li>Search</li></a>
+                        <a id="button-toabout"><li>about</li></a>
+                    </ul>
+                    <a id="button-login"><div class="login-info">
+                        
+                        Logged as<br>
+                        <div class="username">
+                            Username
+                        </div>
+                            
+                    </div> </a>
+                    
+                </div>
+        </div>
+        
+        
+        
+        
+        <!--HEADER STOPS HERE-->
+        
+        <div class="error">
+            You are not permitted to add/edit news
+        </div>
+        
+        
+        
+        
+        <div id="search-pannel">
+            <div class="search-closer">
+                <img id="searchcross" src="img/icon/ic_clear_black_24dp_1x.png"
+                     onmouseover="this.src='img/icon/ic_clear_black_24dp_1x_light.png';" onmouseout="this.src='img/icon/ic_clear_black_24dp_1x.png';">
+            </div>
+            
+            <div class="search-header">
+                 Filter
+            </div>
+            <div id="searchboxes">
+                <div id="search-by-author">
+                    <div id="search-by-author-title">
+                        Search by author:
+                    </div>
+                    <br>
+                    <select class="search-authors-select">
+                        <option value='boi'>boi</option>
+                    </select>
+                </div>
+            
+                <div id="search-by-date">
+                    <div id="search-by-date-title">
+                        Search by date:
+                    </div>
+                    <input type="date" id="datesearchbox"/>
+                </div>
+            </div>
+            <div id="searchbuttons">
+                <button id="clearfilters">Clear</button>
+                <button id="applyfilters">Filter</button>
+            </div>
+            <br>
+            
+            
+                
+                
+        </div>
+        
+        
+        <div class="content-container" id="page-main">
+            <h1>News</h1>
+
+            <div class="mainsection" id="main-page-newssection">
+                
+            </div>
+            
+            
+            <!--TEMP-->
+            <template id="template-article">
+                <div class="news" data-id="id">
+                <h2 class="article-title"><a data-type='more' data-id='id'>Title</a></h2>
+                
+                <a class="imagecontainer-link" data-id='id' data-type='more'><div class="imagecontainer">
+                    <img src="img/img/1.jpg">
+                </div></a>
+                
+                
+                
+                <div class="news-underbox">
+                    <div class="news-preview">
+                        <p>
+                        Article content preview
+                        </p>
+                    </div>
+                    
+                    <div class="news-bottomline">
+                        <div class="submitter">Submited by: <div class="username2">Username</div></div>
+                        <a class="more-link"><div class="more" data-type='read' data-id='id'> Read More</div></a>
+                    </div>
+                    
+                    <div class="news-dateposted">
+                        <div class="news-dateposted-floater">
+                            <div class="news-dateposted-static">
+                                Posted on: 
+                                <div class="news-dateposted-date">
+                                xxx
+                            </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="news-editbox">
+                        <div class="news-edit" data-id='id' data-type='edit'>
+                            <a>Edit</a>
+                        </div>
+                        <div class="news-delete" data-id='id' data-type='delete'>
+                            <a>Delete</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            </template>
+            
+            <div id="paginationbar">
+                <div id="paginate-left">
+                    <a id="paginate-left-btn">previous</a>
+                </div>
+                <div id="paginate-right">
+                    <a id="paginate-right-btn">next</a>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div class="content-container" id="page-new">
+            
+            <h1>Add</h1>
+            
+            <div class="error-add">
+                Thats an error section
+                <br>
+            </div>
+            
+            <div class="mainsection-new">
+                <form id="formnew" onsubmit="return false;">
+                    Title<br>
+                    <input type="text" name="title" id="titlebox"><br>
+                    Summary<br>
+                    <textarea id="summary"></textarea><br>
+                    Content<br>
+                    <textarea id="contentbox"></textarea><br>
+                    Image link<br>
+                    <input type="text" name="img" id="imgbox"><br>
+                    
+                    <button id="clear">Clear</button>
+                    <button id="submit">Submit</button>
+                    
+                    
+                </form>
+                
+                <br>
+                
+            </div>
+            
+        </div>
+            
+        <div class="content-container" id="page-edit">
+            
+            <h1>Edit</h1>
+            
+            <div class="error-add">
+                Thats an error section
+                <br>
+            </div>
+            
+            <div class="mainsection-new">
+                <form id="formedit" onsubmit="return false;">
+                    Title<br>
+                    <input type="text" name="title" id="titleboxedit"><br>
+                    Summary<br>
+                    <textarea id="summaryedit"></textarea><br>
+                    Content<br>
+                    <textarea id="contentboxedit"></textarea><br>
+                    Image link<br>
+                    <input type="text" name="img" id="imgboxedit"><br>
+                    
+                    <button id="edit-cancel">Cancel</button>
+                    <button id="edit-submit">Submit</button>
+                    
+                    
+                </form>
+                
+                <br>
+            </div>
+            
+        </div>
+            
+        <div id="page-login">
+            <div class="login-header">
+                Login
+            </div>
+            <div class="login-error">
+                Error Message Goes Here
+            </div>
+            <div class="login-backs">
+                <div class="login-form">
+                    <form onsubmit="return false;" id="loginformid">
+                        Login<br>
+                        <input type="text" name="login"><br>
+                        Password<br>
+                        <input type="text" name="password"><br><br>
+                        <button id="cancel-button-login">Cancel</button>
+                        <button id="submit-button-login">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+            
+        <div id="page-about">
+            ненавижу этот ублюдский предмет
+        </div>
+            
+        <div id="page-full" class="content-container-forfull">
+            <div class="mainsection">
+                <div class="news" data-id="id">
+                    
+                    <div class="fulltitle">Title</div>
+                
+                    <div class="imgcontainerfull">
+                    <img src="img/img/1.jpg">
+                    </div>
+                
+                
+                
+                <div class="news-underbox">
+                    <div class="news-preview">
+                        <p id="fullarticletext">
+                        Article content preview
+                        </p>
+                    </div>
+                    
+                    <div class="news-bottomline">
+                        <div class="submitter">Submited by: <div class="username2 fullsubmitter">Username</div></div>
+                
+                    </div>
+                    
+                    <div class="news-dateposted">
+                        <div class="news-dateposted-floater">
+                            <div class="news-dateposted-static">
+                                Posted on: 
+                                <div class="news-dateposted-date dateposted-full">
+                                xxx
+                            </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="news-editbox-full">
+                        <div class="news-edit full-edit" data-id='id' data-type='edit'>
+                            <a>Edit</a>
+                        </div>
+                        <div class="news-delete full-delete" data-id='id' data-type='delete'>
+                            <a>Delete</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+                
+                
+            </div>
+        </div>
+        
+        
+        
+        <div class="footer">The Radar by 
+            <a href="http://www.soundcloud.com/swooqy">
+            Arseny Gulenkov 
+                </a>© 2k17. 
+        Note that website may look awfull if google fonts are not avaible
+        </div>
+        
+        <script src="script.js"></script>
+            
+    </body>
+</html>
