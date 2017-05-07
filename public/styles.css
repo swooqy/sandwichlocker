@@ -1,14 +1,20 @@
 *{
     box-sizing: border-box;
-    margin 0;
-    padding 0;
+    margin: 0;
+    padding: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 3px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #E91E63;
+}
 
 html {
     background: #e6e9e9;
-    
-    background-image:url("img/resource/backstransient.jpg");
+    background-image: url("img/resource/backstransient.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -18,20 +24,22 @@ html {
     background-size: 100% auto;
 }
 
+body {
+    padding-bottom: 100px;
+}
 
 /*HEADER STYLING*/
 
 .header {
+    position: absolute;
+    top: 0;
     font-family: Raleway, sans-serif;
     text-transform: uppercase;
-    font-size: 2.8vw;
+    font-size: 30px;
     font-weight: 100;
     width: 100%;
     padding: 0px;
     margin: 0;
-    /*background-color: #E5B7DF;
-    background-image: linear-gradient(90deg, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);*/
-    
     display: block;
 }
 
@@ -50,19 +58,16 @@ html {
 }
 
 .navbar {
-   /* margin: auto;*/
     color: #f0f8ff;
     max-width: 800px;
     width: 30%;
     display: inline;
     align-content: center;
     margin:auto;
-    
-  /* position: relative;*/
 }
 
 ul{
-    list-style: circle
+    list-style: circle;
     display: inline;
     margin-left: 0px;
 }
@@ -71,7 +76,7 @@ li {
     list-style-type:none;
     margin: 20px auto;
     display: inline-block;
-    padding 0px 0px;
+    padding: 0px 0px;
 }
 
 .login-info {
@@ -101,7 +106,7 @@ li {
 login-info, navbar{
     display: inline;
     margin: 0;
-    padding 0;
+    padding: 0;
 }
 
 .header-content {
@@ -111,16 +116,28 @@ login-info, navbar{
     margin: auto;
 }
 
+#button-login {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 10em;
+    text-align: center;
+}
+
 
 
 /*SEARCH BAR STYLING*/
 
-.search-authors-select{
-    
+#search-pannel {
+    transition: .0.25s ease;
+    max-width: 680px;
+    margin: 100px auto;
+    margin-bottom: 0;
+}
+
+.search-authors-select {
     font-family: Raleway, serif;
-    
     -webkit-appearance: button;
-    
     background-color: #e6e9e9; 
     background-position: center right;
     background-repeat: no-repeat;
@@ -136,6 +153,7 @@ login-info, navbar{
     height:25px;
     
 }
+
 .search-header {
     font-family: Raleway;
     text-transform: uppercase;
@@ -290,7 +308,7 @@ h2 a:hover{
 
 body {
     margin: 0;
-    padding 0;
+    padding: 0;
 }
 
 .errorsection {
@@ -312,36 +330,37 @@ body {
     margin: auto;
     min-height: 20px;
     margin-bottom: 0;
-    display: block;
 }
 
-.news-edit a{
+.news-edit {
     display: inline;
     font-family: "Raleway", serif;
     font-size: 30%;
     font-weight: 500;
     max-width: 200px;
-    float: left;
     color: #000;
     text-decoration: none;
+    align-content: center;
+    padding: 0 20px;
 }
 
-.news-edit a:hover{
+.news-edit:hover{
     color: #f0e8f0;
     cursor: pointer;
 }
 
-.news-delete a {
+.news-delete {
     display: inline;
     font-family: "Raleway", serif;
     font-size: 30%;
     font-weight: 500;
     max-width: 200px;
-    float: right;
     color: #000;
     text-decoration: none;
+    align-content: center;
+    padding: 0 20px;
 }
-.news-delete a:hover{
+.news-delete:hover{
     color: #f0e8f0;
     cursor: pointer;
 }
@@ -354,21 +373,13 @@ body {
     background-color: #FFF;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     max-width: 680px;
-    margin: -27px auto;
+    margin: 100px auto;
     padding: 0px;
     font-family: Raleway;
     text-transform: uppercase;
-    font-size: 250%;
+    font-size: 45px;
     font-weight: 100;
     padding-bottom: 0.5em;
-}
-
-#search-pannel {
-    transition: .1s ease;
-    max-width: 680px;
-    margin: auto;
-    /*display: none;*/
-    
 }
 
 .news-dateposted {
@@ -379,7 +390,6 @@ body {
     display: inline;
     font-family: "Raleway", serif;
     font-weight: 200;
-    float: left;
 }
 
 .news-dateposted-date {
@@ -393,7 +403,6 @@ body {
     font-family: "Raleway", serif;
     font-size: 30%;
     font-weight: 200;
-    float: left;
 }
 
 
@@ -416,9 +425,6 @@ body {
     font-family: Raleway, serif;
     color: #696969;
     text-decoration:none;
-   
-    /*font-size:60%;*/
-    
 }
 .footer a:hover{
     color:#f0e8f0;
@@ -428,6 +434,10 @@ body {
 
 
 /*LOGIN STYLING*/
+
+#page-login {
+    margin: 100px auto;
+}
 
 .login-html {
     background-image: linear-gradient(90deg, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
@@ -646,9 +656,8 @@ input{
     cursor:pointer;
 }
 
-#datesearchbox {
+#dateFromSearchbox, #dateToSearchbox {
     font-family: Raleway, serif;
-    
     border-style:none;
     background-color: #e6e9e9;
     background-position: center right;
@@ -662,6 +671,7 @@ input{
     white-space: nowrap;
     width: 100%;
     height: 25px;
+    margin: 3px;
 }
 
 #search-by-date {
@@ -696,8 +706,6 @@ input{
     background: #FFF;
     color: #e6e9e9;
 }
-
-
 
 #clearfilters {
     width: 165px;
@@ -740,7 +748,7 @@ textarea{
     background-color: #FFF;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     max-width: 680px;
-    margin: auto;
+    margin: 100px auto;
     padding: 0px;
     font-family: Raleway, sans-serif;
     text-transform: uppercase;
@@ -755,3 +763,70 @@ textarea{
     margin-bottom: 0;
     display: block;
 }
+
+#page-about {
+    margin: 100px auto;
+}
+
+.message {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: 85px;
+    background-color: #FEE;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    padding: 0;
+    font-family: "Raleway", serif;
+    text-transform: none;
+}
+
+.message button {
+    background: none;
+    width: 80px;
+    border: none;
+    cursor: pointer;
+    color: #696969;
+    outline: none;
+    text-transform: uppercase;
+}
+.message button:hover {
+    color: #494949;
+}
+
+.message p {
+    margin: 20px 0 10px;
+    font-weight: 300;
+}
+#warning p {
+    color: #f44242;
+}
+
+@-webkit-keyframes go-right-left {
+    from {
+        left: -315px;
+    }
+    to {
+        left: 10px;
+    }
+}
+@-webkit-keyframes hide {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.message {
+    animation: linear go-right-left 0.3s;
+}
+
+.visible {
+    animation: linear hide 0.4s;
+}
+
